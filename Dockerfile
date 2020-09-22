@@ -14,7 +14,7 @@ COPY go.sh /go.sh
 RUN /bin/bash setup.sh
 
 RUN apt-get install -y unzip wget && mkdir lwt
-RUN wget --quiet https://nchc.dl.sourceforge.net/project/lwt/lwt_v_1_6_3.zip
+RUN wget --quiet https://github.com/coljac/lwt-docker/files/5264407/lwt_v_1_6_3.zip
 RUN cd lwt && unzip -q ../lwt_v_1_6_3.zip && mv connect_xampp.inc.php connect.inc.php
 RUN mv lwt /var/www/html
 RUN chmod -R 755 /var/www/html/lwt                                                                              
